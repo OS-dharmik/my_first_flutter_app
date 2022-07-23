@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_first/pages/widgets/drawer.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -8,15 +9,20 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final data = false;
+  final name = "";
   @override
   Widget build(BuildContext context) {
-    var x = 'dharmik';
+    var x = 'DHARMIK';
     return Scaffold(
-      appBar: AppBar(title: Text('DHARMIK\'S FIRST APP')),
-      body: Center(
-        child: Text('first application by $x'),
-      ),
-      drawer: Drawer(),
+      appBar: AppBar(title: Text('$x\'S  APP')),
+      body: const Center(
+          // child: ElevatedButton(
+          //   onPressed: () => Navigator.of(context).pop(name),
+          //   child: const Text("logout"),
+          // ),
+          ),
+      drawer: const Mydrawer(),
     );
   }
 }
